@@ -1,0 +1,158 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="nuevo-titulo"> Barba </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+  <form [formGroup]="miForm" mode="ios">
+
+    <ion-radio-group value="Si" [(ngModel)]="tiene" formControlName="existe">
+
+      <ion-list-header>
+        <ion-label>¿Si o no?</ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>Si</ion-label>
+        <ion-radio slot="start" value="Si"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>No</ion-label>
+        <ion-radio slot="start" value="No" (click)="limpiarform()"></ion-radio>
+      </ion-item>
+
+    </ion-radio-group>
+
+    <div *ngIf="tiene == 'Si'">
+      
+    <ion-radio-group value="" formControlName="capilaridad">
+      <ion-list-header>
+        <ion-label>Capilaridad</ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>No aplica</ion-label>
+        <ion-radio slot="start" value="" ></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Poblada</ion-label>
+        <ion-radio slot="start" value="Poblada"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Despoblada</ion-label>
+        <ion-radio slot="start" value="Despoblada"></ion-radio>
+      </ion-item>
+
+    </ion-radio-group>
+
+    <ion-radio-group value="" formControlName="estilo">
+      <ion-list-header>
+        <ion-label>Estilo</ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>No aplica</ion-label>
+        <ion-radio slot="start" value="" ></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Chivera</ion-label>
+        <ion-radio slot="start" value="Chivera"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Candado</ion-label>
+        <ion-radio slot="start" value="Candado"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Patillas</ion-label>
+        <ion-radio slot="start" value="Patillas"></ion-radio>
+      </ion-item>
+
+    </ion-radio-group>
+
+    <ion-radio-group value="" formControlName="longitud">
+      <ion-list-header>
+        <ion-label>Longitud</ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>No aplica</ion-label>
+        <ion-radio slot="start" value="" ></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Larga</ion-label>
+        <ion-radio slot="start" value="Larga"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Mediana</ion-label>
+        <ion-radio slot="start" value="Mediana"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Corta</ion-label>
+        <ion-radio slot="start" value="Corta"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Rasurada</ion-label>
+        <ion-radio slot="start" value="Rasurada"></ion-radio>
+      </ion-item>
+
+    </ion-radio-group>
+
+    <ion-radio-group value="" formControlName="particularidad">
+      <ion-list-header>
+        <ion-label>Particularidad</ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>No aplica</ion-label>
+        <ion-radio slot="start" value="" ></ion-radio>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label>Cano</ion-label>
+        <ion-radio slot="start" value="Cano"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Entrecano</ion-label>
+        <ion-radio slot="start" value="Entrecano"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Rojiza</ion-label>
+        <ion-radio slot="start" value="Rojiza"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Albina</ion-label>
+        <ion-radio slot="start" value="Albina"></ion-radio>
+      </ion-item>
+
+    </ion-radio-group>
+
+    </div>
+
+  </form>
+  </ion-list>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+  <ion-button expand="block" routerLink="/f9-bigote" (click)="enviarBarba()">Siguiente</ion-button>
+</ion-toolbar>

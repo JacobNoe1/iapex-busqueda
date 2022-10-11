@@ -1,0 +1,54 @@
+<ion-header class="cabecera-principal" mode="ios">
+  <ion-toolbar color="primary" mode="md" class="ion-no-border">
+    <ion-title slot="start">
+      <h1>
+        ¡ Bienvenido !
+      </h1>
+    </ion-title>
+    <ion-buttons slot="end">
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <h4 class="text-light text-user">Hola</h4>
+      </ion-col>
+      <ion-col size="6">
+        <img class="img-doctor" src="../../assets/img/inicio.png" alt="doctor">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+
+
+
+
+<ion-content [fullscreen]="true" >
+<!--  <ion-list color="dark" class="ion-padding">
+    <ion-text>
+      <h3>Menu</h3>
+    </ion-text>
+    <ion-text color="medium">
+      <h4>Mensaje xd</h4>
+    </ion-text>
+  </ion-list>
+  -->
+
+<div class="machupichu">
+  <ion-card mode="ios" class="ion-activatable ripple-parent opcionMenu" routerLink="/f00-datos-buscador" >
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="9">
+          <p class="card-item-text-1">Buscar persona desaparecida</p>
+        </ion-col>
+        <ion-col size="3">
+          <ion-icon name="person-add" class="iconmenu"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</div>
+
+</ion-content>
+
+

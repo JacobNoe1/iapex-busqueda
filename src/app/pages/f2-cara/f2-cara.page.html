@@ -1,0 +1,134 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="nuevo-titulo"> Cara </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+  <form [formGroup]="miForm" mode="ios">
+
+    <ion-radio-group value="" formControlName="contorno">
+      <ion-list-header>
+        <ion-label>Contorno</ion-label>
+      </ion-list-header>
+        
+      <ion-item>
+        <ion-label>No aplica</ion-label>
+        <ion-radio slot="start" value="" ></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Redondo</ion-label>
+        <ion-radio slot="start" value="Redondo"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Ovalado</ion-label>
+        <ion-radio slot="start" value="Ovalado"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Cuadrado</ion-label>
+        <ion-radio slot="start" value="Cuadrado"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Rectangular</ion-label>
+        <ion-radio slot="start" value="Rectangular"></ion-radio>
+      </ion-item>
+
+    </ion-radio-group>
+
+    <ion-radio-group value="" formControlName="color">
+      <ion-list-header>
+        <ion-label>Color de piel</ion-label>
+      </ion-list-header>
+    
+      <ion-item>
+        <ion-label>No aplica</ion-label>
+        <ion-radio slot="start" value="" ></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Albino</ion-label>
+        <ion-radio slot="start" value="Albino"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Blanco</ion-label>
+        <ion-radio slot="start" value="Blanco"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Trigueño</ion-label>
+        <ion-radio slot="start" value="Trigueño"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Amarillo</ion-label>
+        <ion-radio slot="start" value="Amarillo"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Negro</ion-label>
+        <ion-radio slot="start" value="Negro"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Moreno</ion-label>
+        <ion-radio slot="start" value="Moreno"></ion-radio>
+      </ion-item>
+
+    </ion-radio-group>
+
+    <ion-radio-group value="" formControlName="particularidad">
+        <ion-list-header>
+          <ion-label>Particularidad</ion-label>
+        </ion-list-header>
+  
+        <ion-item>
+          <ion-label>No aplica</ion-label>
+          <ion-radio slot="start" value="" ></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Acné</ion-label>
+          <ion-radio slot="start" value="Acné"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Cicatrices de ácne</ion-label>
+          <ion-radio slot="start" value="Cicatrices de ácne"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Manchada</ion-label>
+          <ion-radio slot="start" value="Manchada"></ion-radio>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label>Pecosa</ion-label>
+          <ion-radio slot="start" value="Pecosa"></ion-radio>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label>Lunares</ion-label>
+          <ion-radio slot="start" value="Lunares"></ion-radio>
+        </ion-item>
+
+    </ion-radio-group>
+  
+  </form>
+  </ion-list>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+  <ion-button expand="block" routerLink="/f3-cabello" (click)="enviarCara()" >Siguiente</ion-button>
+</ion-toolbar>

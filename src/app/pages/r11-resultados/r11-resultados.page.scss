@@ -1,0 +1,47 @@
+.nuevo-titulo2{
+    font-size: 28px;
+    font-style: normal;
+    text-align: center;
+    text-transform: capitalize;
+    line-height: 3em;   
+  }
+
+ion-slides {
+    height: max-content;
+    position: relative;
+}
+
+.swiper-slide {
+    display: block;
+}
+
+.swiper-slide h2 {
+    margin-top: 4rem;
+}
+
+.swiper-slide img {
+    max-height: 50%;
+    max-width: 90%;
+    margin: 0 0 40px 0;
+    pointer-events: none;
+}
+
+b {
+    font-weight: 500;
+}
+
+p {
+    padding: 0 80px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--ion-color-step-600, #424242);
+}
+
+p b {
+    color: var(--ion-text-color, #000000);
+}
+
+.swiper-container {
+    overflow: visible !important;
+}
+

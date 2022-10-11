@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="nuevo-titulo"> Buscador </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-list>
+
+    <form [formGroup]="miForm" mode="ios">
+
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input type="text" formControlName="nombreB" ></ion-input>
+      <p class="text-d" *ngIf="campoNombre('nombreB')"> Solo se permiten letras </p>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Apellidos</ion-label>
+      <ion-input type="text" formControlName="apellidosB" ></ion-input>
+      <p class="text-d" *ngIf="campoNombre('apellidosB')"> Solo se permiten letras </p>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Télefono</ion-label>
+      <ion-input type="tel" formControlName="telefonoB" ></ion-input>
+      <p class="text-d" *ngIf="campoNombre('telefonoB')"> Solo se permiten números </p>
+    </ion-item>
+
+
+
+  </form>
+  </ion-list> 
+  
+  </ion-content>
+
+  <ion-footer>
+    <ion-toolbar>      
+    <ion-button expand="block" routerLink="/datos-generales" (click)="enviarDatosBuscador()" [disabled]="miForm.invalid">Siguiente</ion-button>
+  </ion-toolbar>
+</ion-footer>
+  

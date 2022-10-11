@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="nuevo-titulo"> Labios </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+  <form [formGroup]="miForm" mode="ios">
+
+    <ion-radio-group value="" formControlName="tipo">
+      <ion-list-header>
+        <ion-label>Tipo</ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>No aplica</ion-label>
+        <ion-radio slot="start" value="" ></ion-radio>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label>Gruesos</ion-label>
+        <ion-radio slot="start" value="Gruesos"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Medianos</ion-label>
+        <ion-radio slot="start" value="Medianos"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Delgados</ion-label>
+        <ion-radio slot="start" value="Delgados"></ion-radio>
+      </ion-item>
+
+    </ion-radio-group>
+
+  </form>
+  </ion-list>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+  <ion-button expand="block" routerLink="/f8-barba" (click)="enviarLabios()">Siguiente</ion-button>
+</ion-toolbar>

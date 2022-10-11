@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="nuevo-titulo"> Orejas </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+  <form [formGroup]="miForm" mode="ios">
+
+    <ion-radio-group value="" formControlName="tipo">
+      <ion-list-header>
+        <ion-label>Tipo</ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>No aplica</ion-label>
+        <ion-radio slot="start" value="" ></ion-radio>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label>Peludas</ion-label>
+        <ion-radio slot="start" value="Peludas"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Perforadas</ion-label>
+        <ion-radio slot="start" value="Perforadas"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Prótesis auditiva</ion-label>
+        <ion-radio slot="start" value="Prótesis auditiva"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Lóbulo adherido</ion-label>
+        <ion-radio slot="start" value="Lóbulo adherido"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Lóbulo separado</ion-label>
+        <ion-radio slot="start" value="Lóbulo separado"></ion-radio>
+      </ion-item>
+
+    </ion-radio-group>
+
+  </form>
+  </ion-list>      
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+
+    <ion-button expand="block"  (click)="enviarOrejas()">Buscar paceinte</ion-button>
+
+  </ion-toolbar>
+</ion-footer>

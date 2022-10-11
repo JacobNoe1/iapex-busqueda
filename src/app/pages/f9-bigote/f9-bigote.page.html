@@ -1,0 +1,130 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="nuevo-titulo"> Bigote </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+  <form [formGroup]="miForm" mode="ios">
+
+    <ion-radio-group value="Si" [(ngModel)]="tiene" formControlName="existe">
+      <ion-list-header>
+        <ion-label>¿Si o no?</ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>Si</ion-label>
+        <ion-radio slot="start" value="Si"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>No</ion-label>
+        <ion-radio slot="start" value="No" (click)="limpiarform()"></ion-radio>
+      </ion-item>
+
+    </ion-radio-group>
+
+    <div *ngIf="tiene == 'Si'">
+
+    <ion-radio-group value="" formControlName="capilaridad">
+      <ion-list-header>
+        <ion-label>Capilaridad</ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>No aplica</ion-label>
+        <ion-radio slot="start" value="" ></ion-radio>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label>Poblado</ion-label>
+        <ion-radio slot="start" value="Poblada"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Despoblado</ion-label>
+        <ion-radio slot="start" value="Despoblada"></ion-radio>
+      </ion-item>
+
+    </ion-radio-group>
+
+    <ion-radio-group value="" formControlName="longitud">
+      <ion-list-header>
+        <ion-label>Longitud</ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>No aplica</ion-label>
+        <ion-radio slot="start" value="" ></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Largo</ion-label>
+        <ion-radio slot="start" value="Larga"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Mediano</ion-label>
+        <ion-radio slot="start" value="Mediana"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Corto</ion-label>
+        <ion-radio slot="start" value="Corta"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Rasurado</ion-label>
+        <ion-radio slot="start" value="Rasurada"></ion-radio>
+      </ion-item>
+
+    </ion-radio-group>
+
+    <ion-radio-group value="" formControlName="particularidad">
+      <ion-list-header>
+        <ion-label>Particularidad</ion-label>
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label>No aplica</ion-label>
+        <ion-radio slot="start" value="" ></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Cano</ion-label>
+        <ion-radio slot="start" value="Cano"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Entrecano</ion-label>
+        <ion-radio slot="start" value="Entrecano"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Rojizo</ion-label>
+        <ion-radio slot="start" value="Rojiza"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Albino</ion-label>
+        <ion-radio slot="start" value="Albina"></ion-radio>
+      </ion-item>
+
+    </ion-radio-group>
+
+    </div>
+
+  </form> 
+  </ion-list>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+  <ion-button expand="block" routerLink="/f10-orejas" (click)="enviarBigote()">Siguiente</ion-button>
+</ion-toolbar>

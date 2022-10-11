@@ -1,0 +1,164 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="nuevo-titulo"> Ojos </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list> 
+  <form [formGroup]="miForm" mode="ios">
+
+    <ion-radio-group value="" formControlName="color">
+      <ion-list-header>
+        <ion-label>Color</ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>No aplica</ion-label>
+        <ion-radio slot="start" value="" ></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Negros</ion-label>
+        <ion-radio slot="start" value="Negros"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Miel</ion-label>
+        <ion-radio slot="start" value="Miel"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Cafes</ion-label>
+        <ion-radio slot="start" value="Cafes"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Grises</ion-label>
+        <ion-radio slot="start" value="Grises"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Azules</ion-label>
+        <ion-radio slot="start" value="Azules"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Verdes</ion-label>
+        <ion-radio slot="start" value="Verdes"></ion-radio>
+      </ion-item>
+
+    </ion-radio-group>
+
+    <ion-radio-group value="" formControlName="tamano">
+      <ion-list-header>
+        <ion-label>Tamaño</ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>No aplica</ion-label>
+        <ion-radio slot="start" value="" ></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Grandes</ion-label>
+        <ion-radio slot="start" value="Grandes"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Medianos</ion-label>
+        <ion-radio slot="start" value="Medianos"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Pequeños</ion-label>
+        <ion-radio slot="start" value="Pequeños"></ion-radio>
+      </ion-item>
+
+    </ion-radio-group>
+
+    <ion-radio-group value="" formControlName="particularidad">
+        <ion-list-header>
+          <ion-label>Particularidad</ion-label>
+        </ion-list-header>
+    
+        <ion-item>
+          <ion-label>No aplica</ion-label>
+          <ion-radio slot="start" value="" ></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Ojo artificial</ion-label>
+          <ion-radio slot="start" value="Ojo artificial"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Falta de ojo izquierdo</ion-label>
+          <ion-radio slot="start" value="Falta de ojo izquierdo"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Falta de ojo derecho</ion-label>
+          <ion-radio slot="start" value="Falta de ojo derecho"></ion-radio>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label>Diferente color</ion-label>
+          <ion-radio slot="start" value="Diferente color"></ion-radio>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label>Lente de contacto</ion-label>
+          <ion-radio slot="start" value="Lente de contacto"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Parpado caído</ion-label>
+          <ion-radio slot="start" value="Parpado caído"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Usa gafas</ion-label>
+          <ion-radio slot="start" value="Usa gafas"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Cataratas</ion-label>
+          <ion-radio slot="start" value="Cataratas"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Bizco</ion-label>
+          <ion-radio slot="start" value="Bizco"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Ciego</ion-label>
+          <ion-radio slot="start" value="Ciego"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Separados</ion-label>
+          <ion-radio slot="start" value="Separados"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Ojeras</ion-label>
+          <ion-radio slot="start" value="Ojeras"></ion-radio>
+        </ion-item>
+
+    </ion-radio-group>
+
+  </form>
+  </ion-list>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+  <ion-button expand="block" routerLink="/f5-nariz" (click)="enviarOjos()">Siguiente</ion-button>
+</ion-toolbar>

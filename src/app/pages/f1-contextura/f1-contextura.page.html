@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="nuevo-titulo"> Contextura </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+  <form [formGroup]="miForm" mode="ios">
+
+    <ion-radio-group value="" formControlName="contextura">
+      <ion-list-header>
+        <ion-label>Tipo</ion-label>
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label>No aplica</ion-label>
+        <ion-radio slot="start" value="" ></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Obesa</ion-label>
+        <ion-radio slot="start" value="Obesa"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Robusta</ion-label>
+        <ion-radio slot="start" value="Robusta"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Mediana</ion-label>
+        <ion-radio slot="start" value="Mediana"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Delgada</ion-label>
+        <ion-radio slot="start" value="Delgada"></ion-radio>
+      </ion-item>
+
+    </ion-radio-group>
+  
+  </form>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+  <ion-button expand="block" routerLink="/f2-cara" (click)="enviarContextura()">Siguiente</ion-button>
+</ion-toolbar>

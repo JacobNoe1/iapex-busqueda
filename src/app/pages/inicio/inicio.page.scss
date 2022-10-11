@@ -1,0 +1,64 @@
+
+.cabecera-principal{
+    border-end-end-radius: 15px;
+    border-end-start-radius: 15px;
+    background-color: #3880FF;
+}
+.img-doctor{
+    width: 7rem;
+}
+.text-user{
+    padding-left: 1rem;
+}
+ion-col{
+    padding-bottom: 0;
+}
+.img-doctor{
+    margin-bottom: -4.56rem;
+    width: auto;
+}
+
+ion-icon {
+    font-size: 29px !important;
+}
+ion-badge{
+    margin-left: -1.4rem;
+    margin-top: -.85rem;
+}
+
+
+  // TODO
+.simulacion-grafica{
+    height: 10rem;
+}    
+
+.header-ios ion-toolbar:last-of-type {
+    --border-width: 0px;
+}
+
+.text-light{
+    color: #f4f5f8;
+}
+
+.card-category-padding{
+    padding: .05rem;
+}
+
+
+//estilos del menu principal
+
+.opcionMenu{
+    background-color: #1cb0f6;
+    color: #ffffff;
+    font-size: 25px;
+}
+.iconmenu{
+    color: #2b70c9 !important;
+    font-size: 50px !important;
+    padding: 10px;
+}
+
+.machupichu{
+    padding-top: 5rem;
+}
+

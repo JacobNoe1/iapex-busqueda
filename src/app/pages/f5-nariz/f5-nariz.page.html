@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="nuevo-titulo"> Nariz </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+  <form [formGroup]="miForm" mode="ios">
+
+    <ion-radio-group value="" formControlName="tipo">
+      <ion-list-header>
+        <ion-label>Tipo</ion-label>
+      </ion-list-header>
+      
+      <ion-item>
+        <ion-label>No aplica</ion-label>
+        <ion-radio slot="start" value="" ></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Desviada derecha</ion-label>
+        <ion-radio slot="start" value="Desviada derecha"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Desviada izquierda</ion-label>
+        <ion-radio slot="start" value="Desviada izquierda"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Achada</ion-label>
+        <ion-radio slot="start" value="Achada"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Operada</ion-label>
+        <ion-radio slot="start" value="Operada"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Almoada</ion-label>
+        <ion-radio slot="start" value="Almoada"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Recta</ion-label>
+        <ion-radio slot="start" value="Recta"></ion-radio>
+      </ion-item>
+
+    </ion-radio-group>
+
+  </form>
+  </ion-list>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+  <ion-button expand="block" routerLink="/f6-boca" (click)="enviarNariz()">Siguiente</ion-button>
+</ion-toolbar>

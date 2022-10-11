@@ -1,0 +1,190 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+    </ion-buttons>
+    <ion-title class="nuevo-titulo2"> Resultados </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  
+  <ion-slides pager="true" scroll-bar-background-active	>
+
+    <ion-slide class="alinearVertical" *ngFor="let b of resultados1">
+    
+    <div *ngIf="b != null">
+
+      <div class="slide" >
+
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title> <b> DATOS GENERALES </b> </ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <p> Nombre: <b>{{b.nombre}} {{b.apellido_paterno}} {{b.apellido_materno}}</b></p>
+          <p> Sexo: <b> {{b.sexo}} </b></p>
+          <p> Estatura: <b> {{b.estatura}} centimetros</b></p>
+          <p> Edad: <b> {{b.edad}} años</b></p>
+          <p> Peso: <b> {{b.peso}} kg</b></p>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title> <b> PARTICULARIDADES </b> </ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <p> Falta de extremidad: <b> {{b.particularidades.falta_extremidad}} </b></p>
+          <p> Tatuajes: <b> {{b.particularidades.tatuajes}} </b></p>
+          <p> Cicatrices: <b> {{b.particularidades.cicatrices}} </b></p>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title> <b> CONTEXTURA </b> </ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <p> Contextura: <b> {{b.contextura}} </b></p>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title> <b> CARA </b> </ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <p> Contorno: <b> {{b.cara.contorno}} </b> </p>
+          <p> Color de piel: <b> {{b.cara.color}} </b> </p>
+          <p> Particularidad: <b> {{b.cara.particularidad}} </b> </p>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title> <b> CABELLO </b> </ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <p> Color de piel: <b> {{b.cabello.color}} </b></p>
+          <p> Longitud: <b> {{b.cabello.longitud}} </b></p>
+          <p> Forma: <b> {{b.cabello.forma}} </b></p>
+          <p> Calvicie: <b> {{b.cabello.calvicie}} </b></p>
+          <p> Particularidad: <b> {{b.cabello.particularidad}} </b></p>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title> <b> OJOS </b> </ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <p> Color: <b> {{b.ojos.color}} </b></p>
+          <p> Tamaño: <b> {{b.ojos.tamano}} </b></p>
+          <p> Particularidad: <b> {{b.ojos.particularidad}} </b></p>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title> <b> NARIZ </b> </ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <p> Tipo: <b> {{b.nariz}} </b></p>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title> <b> BOCA </b> </ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <p> Tipo: <b> {{b.boca}} </b></p>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title> <b> LABIOS </b> </ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <p> Tipo: <b> {{b.labios}} </b></p>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title> <b> BARBA </b> </ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <p> ¿Si o no? <b> {{b.barba.existe}} </b></p>
+          <p> Capilaridad: <b> {{b.barba.capilaridad}} </b></p>
+          <p> Estilo: <b> {{b.barba.estilo}} </b></p>
+          <p> Longitud: <b> {{b.barba.longitud}} </b></p>
+          <p> Particularidad: <b> {{b.barba.particularidad}} </b></p>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title> <b> BIGOTE </b> </ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <p> ¿Si o no? <b> {{b.bigote.existe}} </b></p>
+          <p> Capilaridad: <b> {{b.bigote.capilaridad}} </b></p>
+          <p> Longitud: <b> {{b.bigote.longitud}} </b></p>
+          <p> Particularidad: <b> {{b.bigote.particularidad}} </b></p>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title> <b> OREJAS </b> </ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <p> Tipo: <b> {{b.orejas}} </b></p>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title> <b> LOCALIZACIÓN </b> </ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <p> Hospital: <b> b.Hospital Yanga </b></p>
+          <p> Lugar: <b> b.Boca del Rio - Córdoba Km 341.5, Zona Industrial, 94690 Córdoba, Ver. </b></p>
+          <p> Teléfono: <b> b.271 717 7217 </b></p>
+          
+        </ion-card-content>
+      </ion-card>
+
+      </div>
+
+    </div>
+   
+  </ion-slide>
+
+  </ion-slides>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+
+    <ion-button expand="block" routerLink="/inicio" > Ir a inicio </ion-button>
+
+  </ion-toolbar>
+</ion-footer>

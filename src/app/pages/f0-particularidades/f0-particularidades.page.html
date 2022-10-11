@@ -1,0 +1,190 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="nuevo-titulo"> Particularidades </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+  <form [formGroup]="miForm" mode="ios">
+
+    <ion-radio-group formControlName="falta_extremidad">
+      <ion-list-header>
+        <ion-label>Falta de extremidad</ion-label>
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label>No aplica</ion-label>
+        <ion-radio slot="start" value="" ></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Brazo derecho</ion-label>
+        <ion-radio slot="start" value="Brazo derecho" (click)="resetearValorNoAplica('Brazo derecho')"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Brazo izquierdo</ion-label>
+        <ion-radio slot="start" value="Brazo izquierdo" (click)="resetearValorNoAplica('Brazo izquierdo')"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Mano derecha</ion-label>
+        <ion-radio slot="start" value="Mano derecha"  (click)="resetearValorNoAplica('Mano derecha')"></ion-radio>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label>Mano izquierda</ion-label>
+        <ion-radio slot="start" value="Mano izquierda" (click)="resetearValorNoAplica('Mano izquierda')"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Pierna derecha</ion-label>
+        <ion-radio slot="start" value="Pierna derecha" (click)="resetearValorNoAplica('Pierna derecha')"></ion-radio>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label>Pierna izquierda</ion-label>
+        <ion-radio slot="start" value="Pierna izquierda" (click)="resetearValorNoAplica('Pierna izquierda')"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Pie derecho</ion-label>
+        <ion-radio slot="start" value="Pie derecho" (click)="resetearValorNoAplica('Pie derecho')"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Pie izquierdo</ion-label>
+        <ion-radio slot="start" value="Pie izquierdo" (click)="resetearValorNoAplica('Pie izquierdo')"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+
+    <ion-radio-group value="" formControlName="tatuajes">
+
+      <ion-list-header>
+        <ion-label>Tatuajes</ion-label>
+      </ion-list-header>
+      
+      <ion-item>
+        <ion-label>No aplica</ion-label>
+        <ion-radio slot="start" value="" ></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Cabeza</ion-label>
+        <ion-radio slot="start" value="Cabeza"></ion-radio>
+      </ion-item>
+
+      <ion-item  *ngIf="miForm.controls['falta_extremidad'].value != 'Brazo derecho'">
+        <ion-label>Brazo derecho</ion-label>
+        <ion-radio slot="start" value="Brazo derecho"></ion-radio>
+      </ion-item>
+
+      <ion-item *ngIf="miForm.controls['falta_extremidad'].value != 'Brazo izquierdo'">
+        <ion-label>Brazo izquierdo</ion-label>
+        <ion-radio slot="start" value="Brazo izquierdo"></ion-radio>
+      </ion-item>
+
+      <ion-item *ngIf="miForm.controls['falta_extremidad'].value != 'Mano derecha'">
+        <ion-label>Mano derecha</ion-label>
+        <ion-radio slot="start" value="Mano derecha"></ion-radio>
+      </ion-item>
+      
+      <ion-item *ngIf="miForm.controls['falta_extremidad'].value != 'Mano izquierda'">
+        <ion-label>Mano izquierda</ion-label>
+        <ion-radio slot="start" value="Mano izquierda"></ion-radio>
+      </ion-item>
+
+      <ion-item *ngIf="miForm.controls['falta_extremidad'].value != 'Pierna derecha'">
+        <ion-label>Pierna derecha</ion-label>
+        <ion-radio slot="start" value="Pierna derecha"></ion-radio>
+      </ion-item>
+      
+      <ion-item *ngIf="miForm.controls['falta_extremidad'].value != 'Pierna izquierda'">
+        <ion-label>Pierna izquierda</ion-label>
+        <ion-radio slot="start" value="Pierna izquierda"></ion-radio>
+      </ion-item>
+  
+      <ion-item *ngIf="miForm.controls['falta_extremidad'].value != 'Pie derecho'">
+        <ion-label>Pie derecho</ion-label>
+        <ion-radio slot="start" value="Pie derecho"></ion-radio>
+      </ion-item>
+
+      <ion-item *ngIf="miForm.controls['falta_extremidad'].value != 'Pie izquierdo'">
+        <ion-label>Pie izquierdo</ion-label>
+        <ion-radio slot="start" value="Pie izquierdo"></ion-radio>
+      </ion-item>
+
+    </ion-radio-group>
+
+    <ion-radio-group value="" formControlName="cicatrices">
+
+      <ion-list-header>
+        <ion-label>Cicatrices</ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>No aplica</ion-label>
+        <ion-radio slot="start" value="" ></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Cabeza</ion-label>
+        <ion-radio slot="start" value="Cabeza"></ion-radio>
+      </ion-item>
+
+      <ion-item *ngIf="miForm.controls['falta_extremidad'].value != 'Brazo derecho'">
+        <ion-label>Brazo derecho</ion-label>
+        <ion-radio slot="start" value="Brazo derecho"></ion-radio>
+      </ion-item>
+
+      <ion-item *ngIf="miForm.controls['falta_extremidad'].value != 'Brazo izquierdo'">
+        <ion-label>Brazo izquierdo</ion-label>
+        <ion-radio slot="start" value="Brazo izquierdo"></ion-radio>
+      </ion-item>
+
+      <ion-item *ngIf="miForm.controls['falta_extremidad'].value != 'Mano derecha'">
+        <ion-label>Mano derecha</ion-label>
+        <ion-radio slot="start" value="Mano derecha"></ion-radio>
+      </ion-item>
+      
+      <ion-item *ngIf="miForm.controls['falta_extremidad'].value != 'Mano izquierda'">
+        <ion-label>Mano izquierda</ion-label>
+        <ion-radio slot="start" value="Mano izquierda"></ion-radio>
+      </ion-item>
+
+      <ion-item *ngIf="miForm.controls['falta_extremidad'].value != 'Pierna derecha'">
+        <ion-label>Pierna derecha</ion-label>
+        <ion-radio slot="start" value="Pierna derecha"></ion-radio>
+      </ion-item>
+      
+      <ion-item *ngIf="miForm.controls['falta_extremidad'].value != 'Pierna izquierda'"> 
+        <ion-label>Pierna izquierda</ion-label>
+        <ion-radio slot="start" value="Pierna izquierda"></ion-radio>
+      </ion-item>
+  
+      <ion-item *ngIf="miForm.controls['falta_extremidad'].value != 'Pie derecho'">
+        <ion-label>Pie derecho</ion-label>
+        <ion-radio slot="start" value="Pie derecho"></ion-radio>
+      </ion-item>
+
+      <ion-item *ngIf="miForm.controls['falta_extremidad'].value != 'Pie izquierdo'">
+        <ion-label>Pie izquierdo</ion-label>
+        <ion-radio slot="start" value="Pie izquierdo"></ion-radio>
+      </ion-item>
+
+    </ion-radio-group>
+
+  </form>
+  </ion-list>
+  
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button expand="block" routerLink="/f1-contextura" (click)="enviarParrticularidades()" color="primary">Siguiente</ion-button>
+  </ion-toolbar>
